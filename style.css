@@ -1,0 +1,125 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    /* Primary colors */
+    --primary-color: #4e73df; /* A modern blue */
+    --secondary-color: #1cc88a; /* A bright green for highlights */
+    
+    /* Background colors */
+    --background-dark: #2c3e50; /* Dark background for the main app area */
+    --background-light: #ecf0f1; /* Light background for cards, sections */
+    
+    /* Text colors */
+    --text-dark: #34495e; /* Dark text for readability */
+    --text-light: #ffffff; /* Light text for contrast */
+    
+    /* Accent colors */
+    --accent-color: #f05d23; /* Orange accent for buttons or highlights */
+    
+    /* Border colors */
+    --border-light: #bdc3c7; /* Light border for cards, inputs */
+    --border-dark: #7f8c8d; /* Dark border for focus */
+}
+
+main{
+    min-height: 100dvh;
+    background-color: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+
+    h1{
+        text-transform: uppercase;
+        color: var(--text-light);
+    }
+
+    #inp{
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+
+    #btn{
+        font-size: 16px;
+        padding: 5px;
+        text-transform: uppercase;
+        background-color: var(--accent-color);
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        color: var(--text-light);
+    }
+
+    #weatherResult{
+        min-height: max-content;
+        min-width: 200px;
+        /* border: 2px solid var(--border-light); */
+        background-color: var(--background-light);
+        border-radius: 10px;
+        overflow: hidden;
+        visibility:hidden;
+
+        h4{
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 18px;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 38px;
+            margin: 10px 0 ;
+            color: var(--primary-color);
+        }
+
+        .div{
+            min-height: 150px;
+            min-width: 250px;
+            /* border: 2px solid blue; */
+            margin: 12px;
+            column-count: 2;
+            /* column-rule: .1px solid red; */
+            /* column-width: 150px; */
+
+            .row{
+                /* border: 2px solid white; */
+                margin: 0 0 20px 0  ;
+
+                h2{
+                    font-size: 19px;
+                    text-transform: capitalize;
+                    color: var(--text-dark);
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-size: 17px;
+                    color: var(--accent-color);
+                    display: inline-block;
+
+                }
+            }
+        }
+
+        h3{
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+    }
+}
