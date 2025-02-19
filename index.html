@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheather APP</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <main>
+    <div class="bg-video">
+        <video src="./videoplayback.mp4" muted loop autoplay></video>
+    </div>
         <h1 id="h1">Wheather App</h1>
         <input type="text" placeholder="search your city here" id="inp">
         <button id="btn">
@@ -31,7 +36,7 @@
                 </div>
                 <div class="row">
                     <h2></h2>
-                    <span>ans</span>
+                    <span></span>
                 </div>
             </div>
             <h3></h3>
@@ -39,4 +44,5 @@
     </main>
 </body>
 <script src="./script.js"></script>
+
 </html>

@@ -33,8 +33,33 @@ async function getWeather(city) {
     }
 }
 
+
+
+// Event listener for Enter key press
+inp.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const city = inp.value.trim();
+        if (city) {
+            weatherResult.style.visibility = "visible";
+            getWeather(city);
+        } else {
+            weatherResult.innerHTML = '<h4>Please enter a city name.</h4>';
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
 // Display weather data
 function displayWeather(data) {
+
     console.log('data -> ',data);
     console.log('data.location -> ',data.location);
     console.log('data.current -> ',data.current);
@@ -72,5 +97,16 @@ btn.addEventListener('click', () => {
         getWeather(city);
     } else {
         weatherResult.innerHTML = '<h4>Please enter a city name.</h4>';
+    }
+});
+
+
+
+const video = document.querySelector("video");
+
+video.addEventListener("timeupdate", () => {
+    if (video.duration - video.currentTime <= 10) {
+        video.currentTime = 0; // Restart video from beginning
+        video.play(); // Play again
     }
 });
